@@ -4,7 +4,13 @@ from pprint import pprint as p
 
 a = api()
 
-
+print('             _                         _               ')
+print(' /\ /\ _ __ (_) ___ _ __ __ ___      _| |  _ __  _   _ ')
+print("/ / \ \ '_ \| |/ __| '__/ _` \ \ /\ / / | | '_ \| | | |")
+print('\ \_/ / | | | | (__| | | (_| |\ V  V /| |_| |_) | |_| |')
+print(' \___/|_| |_|_|\___|_|  \__,_| \_/\_/ |_(_) .__/ \__, |')
+print('                                          |_|    |___/ ')
+print('                                                       ')
 
 parser = argparse.ArgumentParser(description="Data search program using PDDIKTI API")
 
@@ -24,12 +30,12 @@ parser.add_argument("-dth", "--dosen_teaching_history", help="get lecturer teach
 parser.add_argument("-ptd", "--pt_detail", help="Get university details by ID", type=str)
 parser.add_argument("-ptp", "--pt_prodi", help="Get study program data at a particular university based on ID and academic year", type=str)
 parser.add_argument("-ptl", "--pt_logo", help="Get university logo by ID and Return it as base64 encoded string", type=str)
-parser.add_argument("-ptr", "--rasio_pt", help="Get study program data at a specific university based on ID and academic year", type=str)
+parser.add_argument("-ptr", "--pt_rasio", help="Get study program data at a specific university based on ID and academic year", type=str)
 parser.add_argument("-mpt", "--mahasiswa_pt", help="get student data at a particular university based on ID", type=str)
 parser.add_argument("-ptw", "--pt_waktu_studi", help="get data on average study time of students at a particular university based on ID", type=str)
 parser.add_argument("-ptn", "--pt_name_history", help="get university name history by ID", type=str)
 parser.add_argument("-ptc", "--pt_cost", help="get the estimated tuition fees at a particular university based on ID", type=str)
-'''parser.add_argument("-ptgr", "--pt_graduation_rate", help="", type=str)'''
+parser.add_argument("-ptgr", "--pt_graduation_rate", help="", type=str)
 '''parser.add_argument("-gjrp", "--get_jumlah_prodi_pt", help="", type=str)'''
 '''parser.add_argument("-gjmp", "--get_jumlah_mahasiswa_pt", help="", type=str)'''
 '''parser.add_argument("-gsfnp", "--get_sarpras_file_name_pt", help="", type=str)'''
@@ -129,7 +135,7 @@ elif args.dosen_paten:
     else:
         print(f"No data found on lecturer's patent for: {args.dosen_paten}")
 
-elif args.get_dosen_study_history:
+elif args.dosen_study_history:
     print(f"Searching for lecturer's patent data for: {args.dosen_study_history}")
     result = a.get_dosen_patenget_dosen_study_history(args.dosen_study_history)
     if result:
@@ -210,4 +216,4 @@ elif args.pt_graduation_rate:
         print(f"No data found for: {args.pt_graduation_rate}")
 
 else:
-    print("{'python Unicrawl.py --help' will help you out with all the commands}")
+    print("'python Unicrawl.py --help' will help you out with all the commands")
