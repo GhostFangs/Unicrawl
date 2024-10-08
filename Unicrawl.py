@@ -3,14 +3,15 @@ from pddiktipy import api
 from pprint import pprint as p
 
 a = api()
-
-print('             _                         _               ')
-print(' /\ /\ _ __ (_) ___ _ __ __ ___      _| |  _ __  _   _ ')
-print("/ / \ \ '_ \| |/ __| '__/ _` \ \ /\ / / | | '_ \| | | |")
-print('\ \_/ / | | | | (__| | | (_| |\ V  V /| |_| |_) | |_| |')
-print(' \___/|_| |_|_|\___|_|  \__,_| \_/\_/ |_(_) .__/ \__, |')
-print('                                          |_|    |___/ ')
-print('                                                       ')
+ascii_art = """
+             _                         _               
+ /\ /\ _ __ (_) ___ _ __ __ ___      _| |  _ __  _   _ 
+/ / \ \ '_ \| |/ __| '__/ _` \ \ /\ / / | | '_ \| | | |
+\ \_/ / | | | | (__| | | (_| |\ V  V /| |_| |_) | |_| |
+ \___/|_| |_|_|\___|_|  \__,_| \_/\_/ |_(_) .__/ \__, |
+                                          |_|    |___/ 
+                                                       
+"""
 
 parser = argparse.ArgumentParser(description="Data search program using PDDIKTI API")
 
