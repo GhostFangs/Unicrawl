@@ -3,15 +3,22 @@ from pddiktipy import api
 from pprint import pprint as p
 
 a = api()
-ascii_art = """
-             _                         _               
- /\ /\ _ __ (_) ___ _ __ __ ___      _| |  _ __  _   _ 
-/ / \ \ '_ \| |/ __| '__/ _` \ \ /\ / / | | '_ \| | | |
-\ \_/ / | | | | (__| | | (_| |\ V  V /| |_| |_) | |_| |
- \___/|_| |_|_|\___|_|  \__,_| \_/\_/ |_(_) .__/ \__, |
-                                          |_|    |___/ 
-                                                       
+ascii = """
+     ***********************************************************
+     *              _                         _                *
+     *  /\ /\ _ __ (_) ___ _ __ __ ___      _| |  _ __  _   _  *
+     * / / \ \ '_ \| |/ __| '__/ _` \ \ /\ / / | | '_ \| | | | *
+     * \ \_/ / | | | | (__| | | (_| |\ V  V /| |_| |_) | |_| | *
+     *  \___/|_| |_|_|\___|_|  \__,_| \_/\_/ |_(_) .__/ \__, | *
+     *                                           |_|    |___/  *
+     *  Unicrawl.py 0.1.0                                      *
+     *  a simple script coded by GHstFngs                      *
+     *                                                         *
+     ***********************************************************
+                                                           
 """
+
+print(ascii)
 
 parser = argparse.ArgumentParser(description="Data search program using PDDIKTI API")
 
@@ -218,3 +225,4 @@ elif args.pt_graduation_rate:
 
 else:
     print("'python Unicrawl.py --help' will help you out with all the commands")
+
